@@ -1,0 +1,663 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+.visuallyHidden:not(:focus):not(:active) {   position: absolute;   width: 1px;   height: 1px;   margin: -1px;   border: 0;   padding: 0;   white-space: nowrap;   clip-path: inset(100%);   clip: rect(0 0 0 0);   overflow: hidden; }
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+}
+
+.skip-link a:link,
+.skip-link a:visited {
+  background: white;
+  color: black;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* As per Jenny - max-width: 1600px on <body> is fine as that how I was advised in helpque when starting project */
+
+html { font-size: 125%; } 
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 2.45rem;
+  text-align: center;
+  margin: 4.7rem 0;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 2.1rem;
+  margin: 0;
+}
+
+p {
+  color: #1f2022;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  line-height: 1.45;
+  margin-top: .5rem;
+  margin-bottom: 2.3rem;
+}
+
+img { max-width: 100%; }
+
+a:link,
+a:visited {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Catamaran', sans-serif;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+
+a:hover,
+a:active { color: #6c717d; }
+
+.btn {
+  font-size: .9rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  border: 0;
+  background: rgba(24, 51, 153, 0.78);
+  padding: .85rem 1.6rem;
+  transition: all .2s;
+}
+
+.btn:hover {
+  cursor: pointer;
+	background-color: #6c717d;
+}
+
+header {
+  background-image: url(../images/image1.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+  color: #fff;
+  position: relative;
+}
+
+.logoSmall {
+  font-size: 3.075rem;
+  padding-top: .75rem;
+  display: inline-block;
+}
+
+.logoBig {
+  text-align: center;
+  line-height: .75;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.logoBig1 {
+  font-weight: 600;
+  font-size: 11.35rem;
+}
+
+.logoBig2 {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 7.5rem;
+  margin-top: -10%;
+}
+
+.headerNavigation {
+  float: right;
+  padding-top: 1rem;
+}
+
+.headerNavigation ul li {
+  padding: .8rem;
+  display: inline-block;
+  font-size: .9rem;
+}
+
+.headerNavigation img {
+  position: absolute;
+  top: 1.111rem;
+  right: 1.111rem;
+  visibility: hidden;
+  transition: all .2s;
+}
+
+.headerNavigation img:hover { cursor: pointer; }
+
+.socialNav {
+  float: right;
+  margin-right: 2.45rem;
+  margin-bottom: 2.415rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.socialNav ul {
+  padding: 0;
+  margin: 0;
+}
+
+.socialNav ul li { list-style: none; }
+
+.newsArticlesImages img {
+  width: calc(33.3333% - (4rem / 3));
+  float: left;
+  margin: 0 1rem;
+}
+
+.newsArticlesImages img:first-of-type { margin-left: 0; }
+
+.newsArticlesImages img:last-of-type { margin-right: 0; }
+
+.newsArticlesHighlight { margin-top: 5.45rem; }
+
+.newsArticlesHighlight img {
+  width: 24.61%;
+  float: left;
+}
+
+.newsArticlesHighlightText {
+  width: 75.39%;
+  padding-left: 2.1rem;
+  float: left;
+}
+
+.newsArticlesHighlightText h3 { margin-top: -.5rem; }
+
+.newsArticlesHighlightText p { margin-bottom: 1.55rem; }
+
+.newsArticlesHighlightText p span{ display: none; }
+
+.articleBox1 {
+  width: 50%;
+  float:left;
+}
+
+.articleBox2 {
+  width: 50%;
+  float:left;
+}
+
+.articleBoxText { width: 100%; }
+
+.articleBoxTextLeft { padding: 15.8% 4.7rem 15.8% 8rem; }
+
+.articleBoxTextRight { padding: 15.75% 8rem 15.75% 4.7rem; }
+
+.articleBoxText h3 { font-size: 1.75rem; }
+
+.articleBox1 img,
+.articleBox2 img { 
+  width: 100%; 
+  display: block
+}
+
+.iconRow {
+  width: 80rem;
+  height: 15.9rem;
+  background-image: url(../images/image5.jpg);
+  background-size: cover;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.iconRowWrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.iconBox {
+  width: 33%;
+  float: left;
+  text-align: center;
+  display: inline-block;
+}
+
+.iconBox i { font-size: 2.8rem; }
+
+.iconBox h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.56rem;
+}
+
+.subscribeContact {
+  width: 100%;
+  height: 17rem;
+  background-color: #e3e3e3;
+}
+
+.subscribeContact .wrapper { padding: 4.6rem 0; }
+
+.subscribe {
+  width: 50%;
+  float: left;
+}
+
+.contact {
+  width: 35%;
+  float: left;
+  padding-left: 5.5rem;
+}
+
+.contactNavigation {
+  width: 15%;
+  float: left;
+  text-align: right;
+}
+
+.subscribe h3,
+.contact h3 { font-size: 1.25rem; }
+
+.subscribeContact p { margin: 0; }
+
+.subscribeContact .email {
+  width: 74%;
+  padding: .868rem 1.955rem;
+  border: 0;
+  margin-top: 1.05rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.email::placeholder {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #1f2022;
+}
+
+.subscribeContact .btn {
+  background-color: #000;
+  width: 25%;
+  transform: translate(-5px, -1px);
+  transition: all .2s;
+}
+
+.subscribeContact .btn:hover {
+  cursor: pointer;
+	background-color: #6c717d;
+}
+
+.contact h3 { margin-bottom: 13px; }
+
+.contactNavigation ul li { list-style: none; }
+
+.contactNavigation ul li a:link,
+.contactNavigation ul li a:visited {
+  color: #040404;
+  font-weight: normal;
+  line-height: 1.45;
+}
+
+.contactNavigation ul li a:hover,
+.contactNavigation ul li a:active { color: #6c717d; }
+
+footer {
+  background: #acacac;
+  height: 2.25em;
+  position: relative;
+}
+
+footer p {
+  font-family: 'Roboto', sans-serif;
+  font-size: .9rem;
+  color: #050505;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),     
+(min-resolution: 192dpi) {       
+  header { 
+    background-image: url(../images/image1@2x.jpg);
+  } 
+
+  .iconRow { 
+    background-image: url(../images/image5@2x.jpg);
+  }
+}
+
+@media (max-width: 1400px) {
+  .articleBoxTextLeft { padding: 8% 2.35rem 8% 4rem; }
+
+  .articleBoxTextRight { padding: 8% 4rem 8% 2.35rem; }
+
+  .articleBoxText h3 { font-size: 1.5rem; }
+}
+
+@media (max-width: 1280px) { 
+  .wrapper { width: 90%; }
+
+  .subscribeContact .email { width: 70%; }
+
+  .subscribeContact .btn { width: 29%; }
+}
+
+@media (max-width: 940px) { 
+  html { font-size: 112.5%; } 
+
+  .logoSmall { font-size: 2.222rem; }
+
+  .logoBig1 { font-size: 9.166rem; }
+
+  .logoBig2 { font-size: 6.041rem; }
+
+
+  .subscribeContact {
+    height: 100%;
+    padding-top: 2rem;
+  }
+
+  .subscribeContact .wrapper { padding: 0; }
+
+  .subscribe { width: 40%; }
+
+  .contact {
+    width: 40%;
+    padding-left: 2rem;
+  }
+
+  .contactNavigation { width: 20%; }
+
+  .subscribe p { font-size: 1rem; }
+
+  .contact p { font-size: .888rem; }
+
+  .subscribeContact .email {
+    width: 100%;
+    margin-bottom: .666rem;
+  }
+
+  .email::placeholder { text-align: center; }
+
+  .subscribeContact .btn {
+    background-color: #000;
+    width: 100%;
+    margin-bottom: 2.388rem;
+    transform: translate(0, 0);
+    transition: all .2s;
+  }
+
+  .subscribeContact .btn:hover {
+    cursor: pointer;
+    background-color: #6c717d;
+  }
+}
+
+@media (max-width: 768px) { 
+  h2 {
+    font-size: 1.944rem;
+    margin: 2.277rem 0;
+  }
+
+  h3 {
+    font-size: 1.833rem;
+    text-align: center;
+  }
+  
+  header {
+    height: 600px;
+    background-image: url(../images/image1Mobile.jpg);
+  }
+
+  p {
+    line-height: 1.61;
+    margin-top: .5rem;
+    margin-bottom: 1.444rem;
+  }
+
+  .logoSmall,
+  .headerNavigation,
+  .socialNav { visibility: hidden; }
+  
+  .headerNavigation img { visibility: visible; }
+
+  .logoBig1 { font-size: 5.677rem; }
+
+  .logoBig2 { font-size: 3.75rem; }
+
+  @media (-webkit-min-device-pixel-ratio: 2),     
+  (min-resolution: 192dpi) {       
+    header { 
+      background-image: url(../images/image1Mobile@2x.jpg);
+    }
+  }
+
+  .newsArticlesImages img { width: calc(50% - (2.777rem / 2)); }
+
+  .newsArticlesImages img:first-of-type {
+    margin-left: .888rem;
+    margin-right: .5rem;
+  }
+
+  .newsArticlesImages img:nth-child(2) {
+    margin-left: .5rem;
+    margin-right: .888rem;
+  }
+  .newsArticlesImages img:last-of-type { display: none; }
+
+  .newsArticlesHighlight { margin-top: 2.833rem; }
+  
+  .newsArticlesHighlight img {
+    width: 100%;
+    float: none;
+  }
+
+  .newsArticlesHighlightText {
+    width: 100%;
+    padding: 0 .833rem;
+    float: none;
+  }
+
+  .newsArticlesHighlightText h3 { margin-top: 1rem; }
+
+  .newsArticlesHighlightText p { margin-bottom: 2.111rem; }
+
+  .newsArticlesHighlightText p span{ display: inline; }
+
+  .newsArticlesHighlightText button {
+    font-size: 1rem;
+    margin: 0 auto 2.833rem auto;
+    display: block;
+    padding: 1.333rem 1.722rem;
+  }
+
+  .articleBoxTable { display: table; } /* Inspired by https://stackoverflow.com/questions/220273/how-can-i-reorder-my-divs-with-css */
+
+  .articleBoxTable1 { display: table-footer-group; } /* Inspired by https://stackoverflow.com/questions/220273/how-can-i-reorder-my-divs-with-css */
+
+  .articleBoxTable2 { display: table-header-group; } /* Inspired by https://stackoverflow.com/questions/220273/how-can-i-reorder-my-divs-with-css */
+
+  .articleBox1 {
+    width: 100%;
+    float: none;
+  }
+
+  .articleBox2 {
+    width: 100%;
+    float:none;
+  }
+
+  .articleBoxText {
+    text-align: center;
+    margin-top: 2.055rem;
+    margin-bottom: 2.833rem;
+  }
+
+  .articleBoxTextLeft { padding: 0; }
+
+  .articleBoxTextRight { padding: 0; }
+
+  .articleBoxText h3 { font-size: 1.222rem; }
+
+  .articleBoxText p { padding: 0 1.222rem 0 1rem; }
+
+  .mobileImage1Wrapper {
+    max-height: 20rem;
+    object-fit: cover;
+    object-position: 0 top;
+  }
+
+  .mobileImage2Wrapper {
+    max-height: 20rem;
+    object-fit: cover;
+    object-position: 0 20%;
+  }
+
+  .iconRow {
+    width: 100%;
+    height: 26.277rem;
+    background-image: url(../images/image5Mobile.jpg);
+    display: block;
+  }
+
+  .iconRowWrapper {
+    display: table;
+    padding: 2.833rem 0;
+  }
+
+  .iconBox {
+    width: 100%;
+    float: none;
+    display: inline-block;
+  }
+
+  .iconRowWrapper .iconBox:first-child { display: table-footer-group; }
+
+  .iconRowWrapper .iconBox:nth-child(2) { padding: 2.5rem 0; }
+
+  .iconRowWrapper .iconBox:last-child { display: table-header-group; }
+  
+  .iconBox h3 { font-size: 1.516rem; }
+
+  @media (-webkit-min-device-pixel-ratio: 2),     
+  (min-resolution: 192dpi) {       
+    .iconRow { 
+      background-image: url(../images/image5Mobile@2x.jpg);
+    }
+  }
+
+  .subscribeContact {
+    width: 100%;
+    height: 24.555rem;
+    padding: 1.888rem 1.111rem;
+  }
+
+  .subscribeContact .wrapper {
+    width: 100%;
+    padding: 0;
+  }
+
+  .subscribe {
+    width: 100%;
+    float: none;
+  }
+
+  .contact {
+    width: 70%;
+    float: left;
+    padding-left: 0;
+  }
+
+  .contactNavigation {
+    width: 30%;
+    float: left;
+    text-align: right;
+  }
+
+  .subscribe h3 {
+    font-size: 1.388rem;
+    margin-top: .888rem;
+    margin-bottom: .5rem;
+  }
+
+  .subscribe p {
+    font-size: .888rem;
+    text-align: center;
+    margin: 0;
+  }
+
+  .subscribeContact .email {
+    width: 100%;
+    margin-bottom: .666rem;
+  }
+
+  .email::placeholder {
+    font-family: 'Lato', sans-serif;
+    text-transform: lowercase;
+  }
+
+  .contact h3 {
+    text-align: left;
+    font-size: 1.388rem;
+  }
+  .contact p { font-size: .777rem; }
+
+  .contactNavigation ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .contactNavigation ul li a:link,
+  .contactNavigation ul li a:visited {
+    font-size: 1.111rem;
+    text-align: right;
+    color: #040404;
+    font-weight: normal;
+    line-height: 1.45;
+  }
+
+  .contactNavigation ul li a:hover,
+  .contactNavigation ul li a:active { color: #6c717d; }
+
+  footer p { font-size: .777rem; }
+}
+
+@media (max-width: 480px) { 
+  .newsArticlesHighlight img {
+    width: 78.75%;
+    margin-left: 2.277rem;
+    margin-right: 2.277rem;
+    margin-bottom: 1.277rem;
+  }
+
+  .mobileImage1Wrapper { max-height: 11.333rem; }
+
+  .mobileImage2Wrapper { max-height: 12.444rem; }
+}
+
